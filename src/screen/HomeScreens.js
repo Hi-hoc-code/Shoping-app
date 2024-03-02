@@ -9,9 +9,10 @@ import RegisterScreens from '../form-log/RegisterScreens';
 import MainScreens from './MainScreens';
 import ForgotScreens from '../form-log/ForgotScreens';
 import AboutScreens from '../component/AboutScreens';
-import ContactScreesn from '../component/ContactScreesn';
-import SettingScreen from '../component/SettingScreen';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import ShopScreens from '../component/ShopScreens';
+import BagScreens from '../component/BagScreens';
+import FavoriteScreens from '../component/FavoriteScreens';
 const Stack = createNativeStackNavigator();
 const TabBottom = createBottomTabNavigator();
 
@@ -32,27 +33,35 @@ const HomeScreens = () => {
                     <MaterialCommunityIcons name="home" color={color} size={26} />
                   ),
                 }} />
+              <TabBottom.Screen name='Shop' component={ShopScreens}
+                options={{
+                  tabBarLabel: 'Shop',
+                  tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons name="shopping" color={color} size={26} />
+                  ),
+                }} />
+              <TabBottom.Screen name="Bag" component={BagScreens}
+                options={{
+                  tabBarLabel: 'Bag',
+                  tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons name="bag-personal" color={color} size={26} />
+                  ),
+                }}
+              />
+
+              <TabBottom.Screen name="Favorite" component={FavoriteScreens}
+                options={{
+                  tabBarLabel: 'Favorite',
+                  tabBarIcon: ({ color }) => (
+                    <MaterialCommunityIcons name="heart" color={color} size={26} />
+                  ),
+                }}
+              />
               <TabBottom.Screen name="About" component={AboutScreens}
                 options={{
-                  tabBarLabel: 'Profile',
-                  tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons name="account" color={color} size={26} />
-                  ),
-                }}
-              />
-              <TabBottom.Screen name="Contact" component={ContactScreesn}
-                options={{
-                  tabBarLabel: 'Contact',
+                  tabBarLabel: 'About',
                   tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name="contacts" color={color} size={26} />
-                  ),
-                }}
-              />
-              <TabBottom.Screen name="Setting" component={SettingScreen}
-                options={{
-                  tabBarLabel: 'Setting',
-                  tabBarIcon: ({ color }) => (
-                    <MaterialCommunityIcons name="tools" color={color} size={26} />
                   ),
                 }} />
             </TabBottom.Navigator>

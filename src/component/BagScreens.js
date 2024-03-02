@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const SettingScreen = () => {
+const BagScreens = () => {
   return (
     <View>
-      <Text>SettingScreen</Text>
+      <Text>BagScreens</Text>
     </View>
   )
 }
 
-export default SettingScreen
+export default BagScreens
 
 const styles = StyleSheet.create({})

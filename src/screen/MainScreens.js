@@ -118,7 +118,7 @@ const MainScreens = () => {
           keyExtractor={item => item.id}
           style={{ marginTop: 20 }}
         />
-        <View style={{justifyContent:'center', alignItems:'center'}}><View style={{ width: 290, backgroundColor: '#333', height: 0.5, marginVertical: 10 }}></View></View>
+        <View style={{ justifyContent: 'center', alignItems: 'center' }}><View style={{ width: 290, backgroundColor: '#333', height: 0.5, marginVertical: 10 }}></View></View>
         <View style={styles.row}>
           <View style={{ flexDirection: 'column', flex: 1 }}>
             <Text style={{ fontSize: 34, color: '#333', fontWeight: 'bold' }}>SALE</Text>
